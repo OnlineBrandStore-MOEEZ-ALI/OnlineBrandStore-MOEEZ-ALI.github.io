@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>OnlineBrandStore-MOEEZ-ALI | Watches & Earbuds</title>
 
     <style>
@@ -64,8 +65,12 @@
             justify-content: center;
             text-align: center;
             padding: 70px 20px;
-            background:
-                radial-gradient(circle at center, #292000 0%, #111 35%, #050505 75%);
+            background: radial-gradient(
+                circle at center,
+                #292000 0%,
+                #111 35%,
+                #050505 75%
+            );
         }
 
         .hero-content {
@@ -138,7 +143,10 @@
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(240px, 1fr)
+            );
             gap: 25px;
         }
 
@@ -154,18 +162,30 @@
         .product:hover {
             transform: translateY(-7px);
             border-color: #d4af37;
-            box-shadow: 0 10px 35px rgba(212,175,55,0.15);
+            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.15);
         }
 
         .product-image {
             height: 250px;
-            background: linear-gradient(135deg, #1c1c1c, #080808);
+            background: linear-gradient(
+                135deg,
+                #1c1c1c,
+                #080808
+            );
             display: flex;
             align-items: center;
             justify-content: center;
             color: #d4af37;
             font-size: 75px;
             border-bottom: 1px solid #292929;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
         }
 
         .product-content {
@@ -351,6 +371,7 @@
 
 
             <!-- WATCH 1 -->
+
             <div class="product">
 
                 <div class="product-image">
@@ -382,6 +403,7 @@
 
 
             <!-- WATCH 2 -->
+
             <div class="product">
 
                 <div class="product-image">
@@ -413,14 +435,16 @@
 
 
             <!-- 7DAYS LUNA -->
+
             <div class="product">
 
                 <div class="product-image">
-                    <div class="product-image">
-    <img src="luna-pods-7-days-wireless-tws-earbuds-pakistan-priceoye-mpqkh-500x500.webp"
-         alt="7DAYS Luna Earbuds"
-         style="width:100%; height:100%; object-fit:contain;">
-</div>
+
+                    <img
+                        src="./luna-pods-7-days-wireless-tws-earbuds-pakistan-priceoye-mpqkh-500x500.webp"
+                        alt="7DAYS Luna Earbuds"
+                    >
+
                 </div>
 
                 <div class="product-content">
@@ -448,6 +472,7 @@
 
 
             <!-- EARBUDS 2 -->
+
             <div class="product">
 
                 <div class="product-image">
@@ -501,7 +526,9 @@
 
     <section class="contact" id="contact">
 
-        <h2>Ready to Order?</h2>
+        <h2>
+            Ready to Order?
+        </h2>
 
         <p>
             Contact us on WhatsApp for product details,
