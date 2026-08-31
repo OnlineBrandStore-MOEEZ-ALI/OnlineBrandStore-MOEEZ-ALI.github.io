@@ -1,11 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>OnlineBrandStore-MOEEZ-ALI | Watches, Earbuds & Speakers</title>
+<title>OnlineBrandStore-MOEEZ-ALI</title>
 
 <style>
 *{
@@ -89,7 +88,6 @@ nav a:hover{
 .hero h1{
     font-size:52px;
     margin-bottom:18px;
-    line-height:1.1;
 }
 
 .hero h1 span{
@@ -113,67 +111,10 @@ nav a:hover{
     font-weight:bold;
 }
 
-.whatsapp:hover{
-    transform:translateY(-3px);
-}
-
-.categories{
-    max-width:1150px;
-    margin:auto;
-    padding:60px 20px 20px;
-}
-
-.category-title{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.category-title h2{
-    font-size:34px;
-}
-
-.category-title span{
-    color:#d4af37;
-}
-
-.category-buttons{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.category-btn{
-    background:#151515;
-    border:1px solid #292929;
-    color:white;
-    padding:25px 15px;
-    border-radius:15px;
-    text-align:center;
-    cursor:pointer;
-    transition:.3s;
-    font-size:20px;
-    font-weight:bold;
-}
-
-.category-btn:hover,
-.category-btn.active{
-    border-color:#d4af37;
-    background:#1d1a10;
-    transform:translateY(-5px);
-}
-
-.category-btn small{
-    display:block;
-    color:#999;
-    font-size:13px;
-    margin-top:8px;
-    font-weight:normal;
-}
-
 .products{
     max-width:1150px;
     margin:auto;
-    padding:50px 20px 70px;
+    padding:70px 20px;
 }
 
 .section-title{
@@ -194,6 +135,31 @@ nav a:hover{
     color:#999;
 }
 
+.categories{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:45px;
+}
+
+.category-btn{
+    background:#151515;
+    color:white;
+    border:1px solid #d4af37;
+    padding:12px 28px;
+    border-radius:25px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.category-btn:hover,
+.category-btn.active{
+    background:#d4af37;
+    color:#080808;
+}
+
 .product-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -206,13 +172,13 @@ nav a:hover{
     border-radius:15px;
     overflow:hidden;
     text-align:center;
-    transition:.3s;
+    transition:0.3s;
 }
 
 .product:hover{
     transform:translateY(-7px);
     border-color:#d4af37;
-    box-shadow:0 10px 35px rgba(212,175,55,.15);
+    box-shadow:0 10px 35px rgba(212,175,55,0.15);
 }
 
 .product-image{
@@ -266,10 +232,6 @@ nav a:hover{
     font-weight:bold;
 }
 
-.order:hover{
-    background:white;
-}
-
 .about{
     background:#111;
     border-top:1px solid #222;
@@ -292,7 +254,6 @@ nav a:hover{
     margin:auto;
     line-height:1.8;
     color:#aaa;
-    font-size:16px;
 }
 
 .contact{
@@ -346,10 +307,6 @@ footer .gold{
         font-size:16px;
     }
 
-    .category-buttons{
-        grid-template-columns:1fr;
-    }
-
     .product-grid{
         grid-template-columns:1fr;
     }
@@ -360,7 +317,6 @@ footer .gold{
 <body>
 
 <header>
-
 <div class="nav">
 
 <div class="logo">
@@ -369,13 +325,12 @@ OnlineBrandStore
 
 <nav>
 <a href="#home">Home</a>
-<a href="#categories">Categories</a>
+<a href="#products">Products</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
 
 </div>
-
 </header>
 
 
@@ -405,56 +360,6 @@ target="_blank">
 </a>
 
 </div>
-
-</section>
-
-
-<section class="categories" id="categories">
-
-<div class="category-title">
-
-<h2>
-Shop By <span>Category</span>
-</h2>
-
-</div>
-
-
-<div class="category-buttons">
-
-
-<div class="category-btn active"
-onclick="showCategory('watches', this)">
-
-⌚ Watches
-
-<small>View all watches</small>
-
-</div>
-
-
-<div class="category-btn"
-onclick="showCategory('earbuds', this)">
-
-🎧 Earbuds
-
-<small>View all earbuds</small>
-
-</div>
-
-
-<div class="category-btn"
-onclick="showCategory('speakers', this)">
-
-🔊 Speakers
-
-<small>View all speakers</small>
-
-</div>
-
-
-</div>
-
 </section>
 
 
@@ -462,13 +367,33 @@ onclick="showCategory('speakers', this)">
 
 <div class="section-title">
 
-<h2 id="productHeading">
-Our <span>Watches</span>
+<h2>
+Our <span>Products</span>
 </h2>
 
-<p id="productSubheading">
-Premium watches collection
+<p>
+Choose a category
 </p>
+
+</div>
+
+
+<div class="categories">
+
+<button class="category-btn active"
+onclick="showCategory('watch',this)">
+⌚ Watch
+</button>
+
+<button class="category-btn"
+onclick="showCategory('earbuds',this)">
+🎧 Earbuds
+</button>
+
+<button class="category-btn"
+onclick="showCategory('speaker',this)">
+🔊 Speaker
+</button>
 
 </div>
 
@@ -478,7 +403,7 @@ Premium watches collection
 
 <!-- WATCH 1 -->
 
-<div class="product category-watches">
+<div class="product watch">
 
 <div class="product-image">
 
@@ -490,7 +415,9 @@ alt="ALONE Premium Watch">
 
 <div class="product-content">
 
-<h3>ALONE Premium Watch</h3>
+<h3>
+ALONE Premium Watch
+</h3>
 
 <p>
 Elegant black premium watch
@@ -510,13 +437,12 @@ Order Now
 </a>
 
 </div>
-
 </div>
 
 
 <!-- WATCH 2 -->
 
-<div class="product category-watches">
+<div class="product watch">
 
 <div class="product-image">
 
@@ -528,7 +454,9 @@ alt="Premium Black Watch">
 
 <div class="product-content">
 
-<h3>Premium Black Watch</h3>
+<h3>
+Premium Black Watch
+</h3>
 
 <p>
 Stylish men's watch for
@@ -548,13 +476,12 @@ Order Now
 </a>
 
 </div>
-
 </div>
 
 
 <!-- EARBUD 1 -->
 
-<div class="product category-earbuds" style="display:none;">
+<div class="product earbuds">
 
 <div class="product-image">
 
@@ -566,7 +493,9 @@ alt="7DAYS Luna Earbuds">
 
 <div class="product-content">
 
-<h3>7DAYS Luna</h3>
+<h3>
+7DAYS Luna
+</h3>
 
 <p>
 Stylish wireless earbuds
@@ -586,13 +515,12 @@ Order Now
 </a>
 
 </div>
-
 </div>
 
 
 <!-- EARBUD 2 -->
 
-<div class="product category-earbuds" style="display:none;">
+<div class="product earbuds">
 
 <div class="product-image">
 
@@ -604,7 +532,9 @@ alt="J69 Earbuds">
 
 <div class="product-content">
 
-<h3>J69 Earbuds</h3>
+<h3>
+J69 Earbuds
+</h3>
 
 <p>
 Premium wireless earbuds
@@ -624,29 +554,30 @@ Order Now
 </a>
 
 </div>
-
 </div>
 
 
 <!-- SPEAKER -->
 
-<div class="product category-speakers" style="display:none;">
+<div class="product speaker">
 
 <div class="product-image">
 
 <img
-src="./WhatsApp%20Image%202026-08-20%20at%204.48.11%20PM.jpeg"
+src="./WhatsApp%20Image%202026-08-31%20at%201.57.08%20AM.jpeg"
 alt="Premium Speaker">
 
 </div>
 
 <div class="product-content">
 
-<h3>Premium Speaker</h3>
+<h3>
+Premium Speaker
+</h3>
 
 <p>
-Portable speaker with stylish
-design and quality sound.
+Powerful sound speaker
+for music and everyday use.
 </p>
 
 <div class="price">
@@ -662,12 +593,10 @@ Order Now
 </a>
 
 </div>
-
 </div>
 
 
 </div>
-
 </section>
 
 
@@ -738,84 +667,28 @@ function showCategory(category, button){
     const products =
     document.querySelectorAll(".product");
 
-    products.forEach(function(product){
-
-        if(product.classList.contains("category-" + category)){
-
-            product.style.display = "block";
-
-        }else{
-
-            product.style.display = "none";
-
-        }
-
-    });
-
-
     const buttons =
     document.querySelectorAll(".category-btn");
 
     buttons.forEach(function(btn){
-
         btn.classList.remove("active");
-
     });
-
 
     button.classList.add("active");
 
+    products.forEach(function(product){
 
-    const heading =
-    document.getElementById("productHeading");
+        if(product.classList.contains(category)){
+            product.style.display = "block";
+        }
+        else{
+            product.style.display = "none";
+        }
 
-    const subheading =
-    document.getElementById("productSubheading");
-
-
-    if(category === "watches"){
-
-        heading.innerHTML =
-        'Our <span>Watches</span>';
-
-        subheading.innerText =
-        "Premium watches collection";
-
-    }
-
-
-    if(category === "earbuds"){
-
-        heading.innerHTML =
-        'Our <span>Earbuds</span>';
-
-        subheading.innerText =
-        "Wireless earbuds collection";
-
-    }
-
-
-    if(category === "speakers"){
-
-        heading.innerHTML =
-        'Our <span>Speakers</span>';
-
-        subheading.innerText =
-        "Quality speakers collection";
-
-    }
-
-
-    document.getElementById("products")
-    .scrollIntoView({
-        behavior:"smooth"
     });
-
 }
 
 </script>
 
-
 </body>
 </html>
-```
