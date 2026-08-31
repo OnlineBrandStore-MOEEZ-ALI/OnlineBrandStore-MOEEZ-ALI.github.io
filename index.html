@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>OnlineBrandStore-MOEEZ-ALI</title>
+    <title>OnlineBrandStore-MOEEZ-ALI | Watches & Earbuds</title>
 
     <style>
         * {
@@ -14,67 +14,133 @@
             font-family: Arial, sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background: #f5f5f5;
-            color: #222;
+            background: #0b0b0b;
+            color: #fff;
         }
 
+        /* HEADER */
         header {
-            background: #111;
-            color: white;
-            padding: 20px;
+            background: #050505;
+            border-bottom: 1px solid #d4af37;
+            padding: 18px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            color: #d4af37;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            padding: 70px 20px;
+            background:
+                radial-gradient(circle at center, #292000 0%, #111 35%, #050505 75%);
         }
 
-        header h1 {
-            font-size: 28px;
-            margin-bottom: 8px;
+        .hero-content {
+            max-width: 800px;
         }
 
-        header p {
+        .hero-small {
             color: #d4af37;
             font-size: 15px;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #111, #292929);
-            color: white;
-            text-align: center;
-            padding: 55px 20px;
-        }
-
-        .hero h2 {
-            font-size: 34px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
             margin-bottom: 15px;
         }
 
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 18px;
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            color: #d4af37;
+        }
+
         .hero p {
-            font-size: 17px;
-            margin-bottom: 25px;
+            color: #ccc;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
         }
 
         .whatsapp {
             display: inline-block;
             background: #25D366;
             color: white;
-            padding: 13px 25px;
+            padding: 14px 28px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.3s;
         }
 
+        .whatsapp:hover {
+            transform: translateY(-3px);
+        }
+
+        /* SECTION */
         .products {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 1150px;
+            margin: auto;
+            padding: 70px 20px;
         }
 
-        .products h2 {
+        .section-title {
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 28px;
+            margin-bottom: 45px;
         }
 
+        .section-title h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            color: #d4af37;
+        }
+
+        .section-title p {
+            color: #999;
+        }
+
+        /* PRODUCT GRID */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -82,212 +148,406 @@
         }
 
         .product {
-            background: white;
-            border-radius: 12px;
+            background: #151515;
+            border: 1px solid #292929;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
             text-align: center;
-            padding-bottom: 20px;
+            transition: 0.3s;
         }
 
+        .product:hover {
+            transform: translateY(-7px);
+            border-color: #d4af37;
+            box-shadow: 0 10px 35px rgba(212,175,55,0.15);
+        }
+
+        /* PRODUCT IMAGE AREA */
         .product-image {
-            height: 230px;
-            background: #111;
+            height: 250px;
+            background: linear-gradient(135deg, #1c1c1c, #080808);
             display: flex;
             align-items: center;
             justify-content: center;
             color: #d4af37;
-            font-size: 55px;
+            font-size: 75px;
+            border-bottom: 1px solid #292929;
+        }
+
+        .product-content {
+            padding: 22px 15px 25px;
         }
 
         .product h3 {
-            margin: 18px 10px 8px;
             font-size: 20px;
+            margin-bottom: 10px;
         }
 
         .product p {
-            color: #666;
-            margin: 8px 15px;
+            color: #999;
+            line-height: 1.5;
+            min-height: 45px;
         }
 
         .price {
-            color: #b8860b;
-            font-size: 21px;
+            color: #d4af37;
+            font-size: 22px;
             font-weight: bold;
-            margin: 15px;
+            margin: 18px 0;
         }
 
         .order {
             display: inline-block;
-            background: #111;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
+            background: #d4af37;
+            color: #080808;
+            padding: 11px 23px;
+            border-radius: 7px;
             text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         .order:hover {
-            background: #333;
+            background: #fff;
         }
 
+        /* ABOUT */
         .about {
-            background: white;
-            padding: 40px 20px;
+            background: #111;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+            padding: 70px 20px;
             text-align: center;
-            margin-top: 40px;
         }
 
         .about h2 {
-            margin-bottom: 15px;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about h2 span {
+            color: #d4af37;
         }
 
         .about p {
-            max-width: 700px;
+            max-width: 750px;
             margin: auto;
-            line-height: 1.7;
-            color: #555;
+            line-height: 1.8;
+            color: #aaa;
+            font-size: 16px;
         }
 
-        footer {
-            background: #111;
-            color: white;
+        /* CONTACT */
+        .contact {
+            padding: 60px 20px;
             text-align: center;
-            padding: 25px 15px;
-            margin-top: 0;
+        }
+
+        .contact h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            color: #aaa;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #050505;
+            border-top: 1px solid #d4af37;
+            text-align: center;
+            padding: 30px 15px;
         }
 
         footer p {
-            margin: 7px;
+            margin: 8px;
+            color: #888;
         }
 
-        .gold {
+        footer .gold {
             color: #d4af37;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            .nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
-        <h1>OnlineBrandStore-MOEEZ-ALI</h1>
-        <p>Watches & Earbuds | Karachi</p>
+        <div class="nav">
+
+            <div class="logo">
+                OnlineBrandStore
+            </div>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
     </header>
 
-    <section class="hero">
-        <h2>Premium Products</h2>
-        <p>Stylish Watches & Quality Earbuds at Great Prices</p>
 
-        <a class="whatsapp"
-           href="https://wa.me/923101151110"
-           target="_blank">
-            Order on WhatsApp
-        </a>
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="hero-small">
+                Karachi • Pakistan
+            </div>
+
+            <h1>
+                Style That <span>Speaks</span>
+            </h1>
+
+            <p>
+                Discover stylish watches and quality wireless earbuds
+                designed for your everyday lifestyle.
+            </p>
+
+            <a class="whatsapp"
+               href="https://wa.me/923101151110?text=Hello%20OnlineBrandStore%2C%20I%20want%20to%20know%20about%20your%20products."
+               target="_blank">
+                💬 Order on WhatsApp
+            </a>
+
+        </div>
+
     </section>
 
-    <section class="products">
 
-        <h2>Our Products</h2>
+    <!-- PRODUCTS -->
+    <section class="products" id="products">
+
+        <div class="section-title">
+
+            <h2>Our <span>Products</span></h2>
+
+            <p>
+                Watches & Earbuds
+            </p>
+
+        </div>
+
 
         <div class="product-grid">
 
+
             <!-- WATCH 1 -->
             <div class="product">
-                <div class="product-image">⌚</div>
 
-                <h3>ALONE Premium Watch</h3>
+                <div class="product-image">
+                    ⌚
+                </div>
 
-                <p>Elegant black premium watch</p>
+                <div class="product-content">
 
-                <div class="price">Price: Contact Us</div>
+                    <h3>ALONE Premium Watch</h3>
 
-                <a class="order"
-                   href="https://wa.me/923101151110?text=I%20want%20to%20order%20ALONE%20Premium%20Watch"
-                   target="_blank">
-                    Order Now
-                </a>
+                    <p>
+                        Elegant black premium watch
+                        with a stylish modern design.
+                    </p>
+
+                    <div class="price">
+                        Contact Us
+                    </div>
+
+                    <a class="order"
+                       href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20ALONE%20Premium%20Watch."
+                       target="_blank">
+                        Order Now
+                    </a>
+
+                </div>
+
             </div>
 
 
             <!-- WATCH 2 -->
             <div class="product">
-                <div class="product-image">⌚</div>
 
-                <h3>Premium Black Watch</h3>
+                <div class="product-image">
+                    ⌚
+                </div>
 
-                <p>Stylish watch for men</p>
+                <div class="product-content">
 
-                <div class="price">Price: Contact Us</div>
+                    <h3>Premium Black Watch</h3>
 
-                <a class="order"
-                   href="https://wa.me/923101151110?text=I%20want%20to%20order%20Premium%20Black%20Watch"
-                   target="_blank">
-                    Order Now
-                </a>
+                    <p>
+                        Stylish men's watch for
+                        casual and formal occasions.
+                    </p>
+
+                    <div class="price">
+                        Contact Us
+                    </div>
+
+                    <a class="order"
+                       href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20Premium%20Black%20Watch."
+                       target="_blank">
+                        Order Now
+                    </a>
+
+                </div>
+
             </div>
 
 
             <!-- EARBUDS 1 -->
             <div class="product">
-                <div class="product-image">🎧</div>
 
-                <h3>Wireless Earbuds</h3>
+                <div class="product-image">
+                    🎧
+                </div>
 
-                <p>Clear sound & modern design</p>
+                <div class="product-content">
 
-                <div class="price">Price: Contact Us</div>
+                    <h3>Wireless Earbuds</h3>
 
-                <a class="order"
-                   href="https://wa.me/923101151110?text=I%20want%20to%20order%20Wireless%20Earbuds"
-                   target="_blank">
-                    Order Now
-                </a>
+                    <p>
+                        Clear sound, comfortable fit
+                        and modern wireless design.
+                    </p>
+
+                    <div class="price">
+                        Contact Us
+                    </div>
+
+                    <a class="order"
+                       href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20Wireless%20Earbuds."
+                       target="_blank">
+                        Order Now
+                    </a>
+
+                </div>
+
             </div>
 
 
             <!-- EARBUDS 2 -->
             <div class="product">
-                <div class="product-image">🎧</div>
 
-                <h3>Premium Earbuds</h3>
+                <div class="product-image">
+                    🎧
+                </div>
 
-                <p>Comfortable wireless earbuds</p>
+                <div class="product-content">
 
-                <div class="price">Price: Contact Us</div>
+                    <h3>Premium Earbuds</h3>
 
-                <a class="order"
-                   href="https://wa.me/923101151110?text=I%20want%20to%20order%20Premium%20Earbuds"
-                   target="_blank">
-                    Order Now
-                </a>
+                    <p>
+                        Comfortable wireless earbuds
+                        for music and everyday use.
+                    </p>
+
+                    <div class="price">
+                        Contact Us
+                    </div>
+
+                    <a class="order"
+                       href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20Premium%20Earbuds."
+                       target="_blank">
+                        Order Now
+                    </a>
+
+                </div>
+
             </div>
 
         </div>
+
     </section>
 
 
-    <section class="about">
+    <!-- ABOUT -->
+    <section class="about" id="about">
 
-        <h2>About OnlineBrandStore-MOEEZ-ALI</h2>
+        <h2>
+            About <span>OnlineBrandStore</span>
+        </h2>
 
         <p>
             Welcome to OnlineBrandStore-MOEEZ-ALI.
-            We provide stylish watches and quality earbuds.
-            Our store is based in Karachi, Pakistan.
-            For product details and orders, contact us directly on WhatsApp.
+            We provide stylish watches and quality earbuds
+            in Karachi, Pakistan. Our goal is to provide
+            attractive products at great prices with easy
+            WhatsApp ordering.
         </p>
 
     </section>
 
 
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <h2>Ready to Order?</h2>
+
+        <p>
+            Contact us on WhatsApp for product details,
+            prices and orders.
+        </p>
+
+        <a class="whatsapp"
+           href="https://wa.me/923101151110?text=Hello%20OnlineBrandStore%2C%20I%20want%20to%20place%20an%20order."
+           target="_blank">
+            💬 Chat on WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
     <footer>
 
-        <p><span class="gold">OnlineBrandStore-MOEEZ-ALI</span></p>
+        <p class="gold">
+            OnlineBrandStore-MOEEZ-ALI
+        </p>
 
-        <p>Karachi, Pakistan</p>
+        <p>
+            Karachi, Pakistan
+        </p>
 
-        <p>WhatsApp: 0310-1151110</p>
+        <p>
+            WhatsApp: 0310-1151110
+        </p>
 
-        <p>© 2026 OnlineBrandStore-MOEEZ-ALI</p>
+        <p>
+            © 2026 OnlineBrandStore-MOEEZ-ALI
+        </p>
 
     </footer>
 
