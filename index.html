@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,7 @@
 <title>OnlineBrandStore-MOEEZ-ALI | Watches & Earbuds</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -25,6 +25,7 @@ body{
 }
 
 /* HEADER */
+
 header{
     background:#050505;
     border-bottom:1px solid #d4af37;
@@ -65,29 +66,17 @@ nav a:hover{
     color:#d4af37;
 }
 
-/* OWNER TOP OPTION */
-.owner-link{
-    display:flex;
-    align-items:center;
-    gap:7px;
-}
-
-.owner-link img{
-    width:30px;
-    height:30px;
-    border-radius:50%;
-    object-fit:cover;
-    border:2px solid #d4af37;
-}
 
 /* HERO */
+
 .hero{
-    min-height:520px;
+    min-height:500px;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
     padding:70px 20px;
+
     background:radial-gradient(
         circle at center,
         #292000 0%,
@@ -135,12 +124,10 @@ nav a:hover{
     font-weight:bold;
 }
 
-.whatsapp:hover{
-    transform:translateY(-3px);
-}
 
-/* PRODUCTS */
-.products{
+/* SECTION */
+
+.section{
     max-width:1150px;
     margin:auto;
     padding:70px 20px;
@@ -162,6 +149,79 @@ nav a:hover{
 
 .section-title p{
     color:#999;
+}
+
+
+/* CATEGORY CARDS */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.category-card{
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:18px;
+    padding:45px 20px;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-8px);
+    border-color:#d4af37;
+    box-shadow:0 8px 30px rgba(212,175,55,.15);
+}
+
+.category-icon{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.category-card h3{
+    color:#d4af37;
+    font-size:25px;
+    margin-bottom:10px;
+}
+
+.category-card p{
+    color:#999;
+    line-height:1.5;
+}
+
+.view-button{
+    display:inline-block;
+    margin-top:20px;
+    background:#d4af37;
+    color:#080808;
+    padding:10px 20px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+
+/* PRODUCTS */
+
+.products-section{
+    max-width:1150px;
+    margin:auto;
+    padding:30px 20px 70px;
+}
+
+.products-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.products-title h2{
+    font-size:32px;
+}
+
+.products-title span{
+    color:#d4af37;
 }
 
 .product-grid{
@@ -187,12 +247,14 @@ nav a:hover{
 .product-image{
     height:250px;
     background:linear-gradient(135deg,#1c1c1c,#080808);
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     color:#d4af37;
     font-size:75px;
-    border-bottom:1px solid #292929;
+
     overflow:hidden;
 }
 
@@ -235,12 +297,41 @@ nav a:hover{
     font-weight:bold;
 }
 
+
+/* BACK BUTTON */
+
+.back-button{
+    display:block;
+    width:max-content;
+    margin:0 auto 35px;
+
+    background:#222;
+    color:white;
+
+    padding:11px 25px;
+
+    border:1px solid #d4af37;
+    border-radius:7px;
+
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.back-button:hover{
+    background:#d4af37;
+    color:#080808;
+}
+
+
 /* ABOUT */
+
 .about{
     background:#111;
     border-top:1px solid #222;
     border-bottom:1px solid #222;
+
     padding:70px 20px;
+
     text-align:center;
 }
 
@@ -256,11 +347,14 @@ nav a:hover{
 .about p{
     max-width:750px;
     margin:auto;
+
     line-height:1.8;
     color:#aaa;
 }
 
-/* OWNER SECTION */
+
+/* OWNER */
+
 .owner{
     padding:70px 20px;
     text-align:center;
@@ -280,15 +374,18 @@ nav a:hover{
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center;
 }
 
 .owner-card img{
     width:120px;
     height:120px;
+
     border-radius:50%;
+
     object-fit:cover;
+
     border:3px solid #d4af37;
+
     margin-bottom:15px;
 }
 
@@ -302,7 +399,9 @@ nav a:hover{
     color:#999;
 }
 
+
 /* CONTACT */
+
 .contact{
     padding:60px 20px;
     text-align:center;
@@ -318,11 +417,15 @@ nav a:hover{
     margin-bottom:25px;
 }
 
+
 /* FOOTER */
+
 footer{
     background:#050505;
     border-top:1px solid #d4af37;
+
     text-align:center;
+
     padding:30px 15px;
 }
 
@@ -337,7 +440,16 @@ footer .gold{
     font-size:18px;
 }
 
+
+/* HIDE */
+
+.hidden{
+    display:none;
+}
+
+
 /* MOBILE */
+
 @media(max-width:700px){
 
     .nav{
@@ -358,16 +470,25 @@ footer .gold{
         font-size:16px;
     }
 
+    .category-grid{
+        grid-template-columns:1fr;
+    }
+
     .product-grid{
         grid-template-columns:1fr;
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
+
 <!-- HEADER -->
+
 <header>
 
 <div class="nav">
@@ -377,16 +498,27 @@ OnlineBrandStore
 </div>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#products">Products</a>
-<a href="#about">About</a>
 
-<a href="#owner" class="owner-link">
-<img src="./WhatsApp%20Image%202026-08-31%20at%203.34.58%20PM.jpeg" alt="Owner">
+<a href="#home">
+Home
+</a>
+
+<a href="#categories">
+Categories
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#owner">
 Owner
 </a>
 
-<a href="#contact">Contact</a>
+<a href="#contact">
+Contact
+</a>
+
 </nav>
 
 </div>
@@ -394,7 +526,9 @@ Owner
 </header>
 
 
+
 <!-- HERO -->
+
 <section class="hero" id="home">
 
 <div class="hero-content">
@@ -408,14 +542,17 @@ Style That <span>Speaks</span>
 </h1>
 
 <p>
-Discover stylish watches and quality wireless earbuds
-designed for your everyday lifestyle.
+Discover stylish watches, quality wireless earbuds
+and speakers designed for your everyday lifestyle.
 </p>
 
-<a class="whatsapp"
+<a
+class="whatsapp"
 href="https://wa.me/923101151110?text=Hello%20OnlineBrandStore%2C%20I%20want%20to%20know%20about%20your%20products."
 target="_blank">
+
 💬 Order on WhatsApp
+
 </a>
 
 </div>
@@ -423,14 +560,133 @@ target="_blank">
 </section>
 
 
-<!-- PRODUCTS -->
-<section class="products" id="products">
+
+<!-- CATEGORIES -->
+
+<section class="section" id="categories">
 
 <div class="section-title">
 
-<h2>Our <span>Products</span></h2>
+<h2>
+Shop By <span>Category</span>
+</h2>
 
-<p>Watches & Earbuds</p>
+<p>
+Choose a category to see our products
+</p>
+
+</div>
+
+
+<div class="category-grid">
+
+
+<!-- WATCH CATEGORY -->
+
+<div
+class="category-card"
+onclick="showCategory('watches')">
+
+<div class="category-icon">
+⌚
+</div>
+
+<h3>
+Watches
+</h3>
+
+<p>
+Stylish watches for men
+and everyday fashion.
+</p>
+
+<div class="view-button">
+View Watches
+</div>
+
+</div>
+
+
+
+<!-- EARBUD CATEGORY -->
+
+<div
+class="category-card"
+onclick="showCategory('earbuds')">
+
+<div class="category-icon">
+🎧
+</div>
+
+<h3>
+Earbuds
+</h3>
+
+<p>
+Wireless earbuds with
+modern sound and design.
+</p>
+
+<div class="view-button">
+View Earbuds
+</div>
+
+</div>
+
+
+
+<!-- SPEAKER CATEGORY -->
+
+<div
+class="category-card"
+onclick="showCategory('speakers')">
+
+<div class="category-icon">
+🔊
+</div>
+
+<h3>
+Speakers
+</h3>
+
+<p>
+Portable speakers for
+music and entertainment.
+</p>
+
+<div class="view-button">
+View Speakers
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- WATCH PRODUCTS -->
+
+<section
+class="products-section hidden"
+id="watches">
+
+<button
+class="back-button"
+onclick="backToCategories()">
+
+← Back To Categories
+
+</button>
+
+
+<div class="products-title">
+
+<h2>
+Our <span>Watches</span>
+</h2>
 
 </div>
 
@@ -439,6 +695,7 @@ target="_blank">
 
 
 <!-- WATCH 1 -->
+
 <div class="product">
 
 <div class="product-image">
@@ -451,28 +708,36 @@ alt="ALONE Premium Watch">
 
 <div class="product-content">
 
-<h3>ALONE Premium Watch</h3>
+<h3>
+ALONE Premium Watch
+</h3>
 
 <p>
 Elegant black premium watch
-with a stylish modern design.
+with stylish modern design.
 </p>
 
 <div class="price">
 Contact Us
 </div>
 
-<a class="order"
+<a
+class="order"
 href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20ALONE%20Premium%20Watch."
 target="_blank">
+
 Order Now
+
 </a>
 
 </div>
+
 </div>
 
 
+
 <!-- WATCH 2 -->
+
 <div class="product">
 
 <div class="product-image">
@@ -485,7 +750,9 @@ alt="Premium Black Watch">
 
 <div class="product-content">
 
-<h3>Premium Black Watch</h3>
+<h3>
+Premium Black Watch
+</h3>
 
 <p>
 Stylish men's watch for
@@ -496,17 +763,55 @@ casual and formal occasions.
 Contact Us
 </div>
 
-<a class="order"
+<a
+class="order"
 href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20Premium%20Black%20Watch."
 target="_blank">
+
 Order Now
+
 </a>
 
 </div>
+
 </div>
 
 
-<!-- EARBUDS -->
+</div>
+
+</section>
+
+
+
+<!-- EARBUD PRODUCTS -->
+
+<section
+class="products-section hidden"
+id="earbuds">
+
+<button
+class="back-button"
+onclick="backToCategories()">
+
+← Back To Categories
+
+</button>
+
+
+<div class="products-title">
+
+<h2>
+Our <span>Earbuds</span>
+</h2>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- LUNA -->
+
 <div class="product">
 
 <div class="product-image">
@@ -519,28 +824,36 @@ alt="7DAYS Luna Earbuds">
 
 <div class="product-content">
 
-<h3>7DAYS Luna</h3>
+<h3>
+7DAYS Luna
+</h3>
 
 <p>
 Stylish wireless earbuds
-with a modern design.
+with modern design.
 </p>
 
 <div class="price">
 Rs. 1,500
 </div>
 
-<a class="order"
+<a
+class="order"
 href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%207DAYS%20Luna%20Earbuds."
 target="_blank">
+
 Order Now
+
 </a>
 
 </div>
+
 </div>
 
 
-<!-- J69 EARBUDS -->
+
+<!-- J69 -->
+
 <div class="product">
 
 <div class="product-image">
@@ -553,7 +866,9 @@ alt="J69 Earbuds">
 
 <div class="product-content">
 
-<h3>J69 Earbuds</h3>
+<h3>
+J69 Earbuds
+</h3>
 
 <p>
 Premium wireless earbuds
@@ -564,17 +879,55 @@ with stylish modern design.
 Contact Us
 </div>
 
-<a class="order"
+<a
+class="order"
 href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20J69%20Earbuds."
 target="_blank">
+
 Order Now
+
 </a>
 
 </div>
+
 </div>
 
 
+</div>
+
+</section>
+
+
+
+<!-- SPEAKER PRODUCTS -->
+
+<section
+class="products-section hidden"
+id="speakers">
+
+<button
+class="back-button"
+onclick="backToCategories()">
+
+← Back To Categories
+
+</button>
+
+
+<div class="products-title">
+
+<h2>
+Our <span>Speakers</span>
+</h2>
+
+</div>
+
+
+<div class="product-grid">
+
+
 <!-- SPEAKER -->
+
 <div class="product">
 
 <div class="product-image">
@@ -587,7 +940,9 @@ alt="Premium Speaker">
 
 <div class="product-content">
 
-<h3>Premium Speaker</h3>
+<h3>
+Premium Speaker
+</h3>
 
 <p>
 Portable wireless speaker
@@ -598,21 +953,28 @@ for music and everyday use.
 Contact Us
 </div>
 
-<a class="order"
+<a
+class="order"
 href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20Premium%20Speaker."
 target="_blank">
+
 Order Now
+
 </a>
 
 </div>
+
 </div>
+
 
 </div>
 
 </section>
 
 
+
 <!-- ABOUT -->
+
 <section class="about" id="about">
 
 <h2>
@@ -620,22 +982,31 @@ About <span>OnlineBrandStore</span>
 </h2>
 
 <p>
+
 Welcome to OnlineBrandStore-MOEEZ-ALI.
-We provide stylish watches, quality earbuds
-and speakers in Karachi, Pakistan.
-Our goal is to provide attractive products
-at great prices with easy WhatsApp ordering.
+
+We provide stylish watches,
+quality earbuds and speakers
+in Karachi, Pakistan.
+
+Our goal is to provide attractive
+products at great prices with
+easy WhatsApp ordering.
+
 </p>
 
 </section>
 
 
+
 <!-- OWNER -->
+
 <section class="owner" id="owner">
 
 <h2>
 Meet the <span>Owner</span>
 </h2>
+
 
 <div class="owner-card">
 
@@ -643,16 +1014,22 @@ Meet the <span>Owner</span>
 src="./WhatsApp%20Image%202026-08-31%20at%203.34.58%20PM.jpeg"
 alt="MOEEZ ALI">
 
-<h3>MOEEZ ALI</h3>
+<h3>
+MOEEZ ALI
+</h3>
 
-<p>Owner • OnlineBrandStore</p>
+<p>
+Owner • OnlineBrandStore
+</p>
 
 </div>
 
 </section>
 
 
+
 <!-- CONTACT -->
+
 <section class="contact" id="contact">
 
 <h2>
@@ -664,16 +1041,21 @@ Contact us on WhatsApp for product details,
 prices and orders.
 </p>
 
-<a class="whatsapp"
+<a
+class="whatsapp"
 href="https://wa.me/923101151110?text=Hello%20OnlineBrandStore%2C%20I%20want%20to%20place%20an%20order."
 target="_blank">
+
 💬 Chat on WhatsApp
+
 </a>
 
 </section>
 
 
+
 <!-- FOOTER -->
+
 <footer>
 
 <p class="gold">
@@ -694,6 +1076,51 @@ WhatsApp: 0310-1151110
 
 </footer>
 
+
+
+<script>
+
+/* CATEGORY SYSTEM */
+
+function showCategory(category){
+
+    document.getElementById("categories").classList.add("hidden");
+
+    document.getElementById("watches").classList.add("hidden");
+
+    document.getElementById("earbuds").classList.add("hidden");
+
+    document.getElementById("speakers").classList.add("hidden");
+
+    document.getElementById(category).classList.remove("hidden");
+
+    document.getElementById(category).scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* BACK TO CATEGORY */
+
+function backToCategories(){
+
+    document.getElementById("watches").classList.add("hidden");
+
+    document.getElementById("earbuds").classList.add("hidden");
+
+    document.getElementById("speakers").classList.add("hidden");
+
+    document.getElementById("categories").classList.remove("hidden");
+
+    document.getElementById("categories").scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+
 </body>
 </html>
-```
