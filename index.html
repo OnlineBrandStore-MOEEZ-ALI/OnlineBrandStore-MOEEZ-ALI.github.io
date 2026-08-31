@@ -1,726 +1,799 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>OnlineBrandStore-MOEEZ-ALI | Watches & Earbuds</title>
+<title>OnlineBrandStore-MOEEZ-ALI | Watches, Earbuds & Speakers</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        body {
-            background: #0b0b0b;
-            color: white;
-        }
+body{
+    background:#0b0b0b;
+    color:white;
+}
 
-        header {
-            background: #050505;
-            border-bottom: 1px solid #d4af37;
-            padding: 18px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+header{
+    background:#050505;
+    border-bottom:1px solid #d4af37;
+    padding:18px 20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-        .nav {
-            max-width: 1150px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
+.nav{
+    max-width:1150px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
 
-        .logo {
-            color: #d4af37;
-            font-size: 22px;
-            font-weight: bold;
-        }
+.logo{
+    color:#d4af37;
+    font-size:22px;
+    font-weight:bold;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:14px;
+}
 
-        nav a:hover {
-            color: #d4af37;
-        }
+nav a:hover{
+    color:#d4af37;
+}
 
-        .hero {
-            min-height: 520px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 70px 20px;
+.hero{
+    min-height:520px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:70px 20px;
+    background:radial-gradient(
+        circle at center,
+        #292000 0%,
+        #111 35%,
+        #050505 75%
+    );
+}
 
-            background: radial-gradient(
-                circle at center,
-                #292000 0%,
-                #111 35%,
-                #050505 75%
-            );
-        }
+.hero-content{
+    max-width:800px;
+}
 
-        .hero-content {
-            max-width: 800px;
-        }
+.hero-small{
+    color:#d4af37;
+    font-size:15px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
 
-        .hero-small {
-            color: #d4af37;
-            font-size: 15px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
+.hero h1{
+    font-size:52px;
+    margin-bottom:18px;
+    line-height:1.1;
+}
 
-        .hero h1 {
-            font-size: 52px;
-            margin-bottom: 18px;
-            line-height: 1.1;
-        }
+.hero h1 span{
+    color:#d4af37;
+}
 
-        .hero h1 span {
-            color: #d4af37;
-        }
+.hero p{
+    color:#ccc;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
 
-        .hero p {
-            color: #ccc;
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
+.whatsapp{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    padding:14px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-        .whatsapp {
-            display: inline-block;
-            background: #25D366;
-            color: white;
-            padding: 14px 28px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.whatsapp:hover{
+    transform:translateY(-3px);
+}
 
-        .whatsapp:hover {
-            transform: translateY(-3px);
-        }
+.categories{
+    max-width:1150px;
+    margin:auto;
+    padding:60px 20px 20px;
+}
 
-        .products {
-            max-width: 1150px;
-            margin: auto;
-            padding: 70px 20px;
-        }
+.category-title{
+    text-align:center;
+    margin-bottom:30px;
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+.category-title h2{
+    font-size:34px;
+}
 
-        .section-title h2 {
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
+.category-title span{
+    color:#d4af37;
+}
 
-        .section-title span {
-            color: #d4af37;
-        }
+.category-buttons{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
 
-        .section-title p {
-            color: #999;
-        }
+.category-btn{
+    background:#151515;
+    border:1px solid #292929;
+    color:white;
+    padding:25px 15px;
+    border-radius:15px;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+    font-size:20px;
+    font-weight:bold;
+}
 
-        /* CATEGORY BUTTONS */
+.category-btn:hover,
+.category-btn.active{
+    border-color:#d4af37;
+    background:#1d1a10;
+    transform:translateY(-5px);
+}
 
-        .categories {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
+.category-btn small{
+    display:block;
+    color:#999;
+    font-size:13px;
+    margin-top:8px;
+    font-weight:normal;
+}
 
-        .category-btn {
-            background: #151515;
-            color: white;
-            border: 1px solid #d4af37;
-            padding: 13px 30px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.products{
+    max-width:1150px;
+    margin:auto;
+    padding:50px 20px 70px;
+}
 
-        .category-btn:hover,
-        .category-btn.active {
-            background: #d4af37;
-            color: #080808;
-        }
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(
-                auto-fit,
-                minmax(240px, 1fr)
-            );
-            gap: 25px;
-        }
+.section-title h2{
+    font-size:34px;
+    margin-bottom:10px;
+}
 
-        .product {
-            background: #151515;
-            border: 1px solid #292929;
-            border-radius: 15px;
-            overflow: hidden;
-            text-align: center;
-            transition: 0.3s;
-        }
+.section-title span{
+    color:#d4af37;
+}
 
-        .product:hover {
-            transform: translateY(-7px);
-            border-color: #d4af37;
-            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.15);
-        }
+.section-title p{
+    color:#999;
+}
 
-        .product-image {
-            height: 250px;
-            background: linear-gradient(
-                135deg,
-                #1c1c1c,
-                #080808
-            );
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+.product{
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
+    transition:.3s;
+}
 
-            color: #d4af37;
-            font-size: 75px;
+.product:hover{
+    transform:translateY(-7px);
+    border-color:#d4af37;
+    box-shadow:0 10px 35px rgba(212,175,55,.15);
+}
 
-            border-bottom: 1px solid #292929;
-            overflow: hidden;
-        }
+.product-image{
+    height:250px;
+    background:linear-gradient(135deg,#1c1c1c,#080808);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#d4af37;
+    font-size:75px;
+    border-bottom:1px solid #292929;
+    overflow:hidden;
+}
 
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: block;
-        }
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+}
 
-        .product-content {
-            padding: 22px 15px 25px;
-        }
+.product-content{
+    padding:22px 15px 25px;
+}
 
-        .product h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
+.product h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
 
-        .product p {
-            color: #999;
-            line-height: 1.5;
-            min-height: 45px;
-        }
+.product p{
+    color:#999;
+    line-height:1.5;
+    min-height:45px;
+}
 
-        .price {
-            color: #d4af37;
-            font-size: 22px;
-            font-weight: bold;
-            margin: 18px 0;
-        }
+.price{
+    color:#d4af37;
+    font-size:22px;
+    font-weight:bold;
+    margin:18px 0;
+}
 
-        .order {
-            display: inline-block;
-            background: #d4af37;
-            color: #080808;
-            padding: 11px 23px;
-            border-radius: 7px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.order{
+    display:inline-block;
+    background:#d4af37;
+    color:#080808;
+    padding:11px 23px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-        .order:hover {
-            background: white;
-        }
+.order:hover{
+    background:white;
+}
 
-        .about {
-            background: #111;
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
-            padding: 70px 20px;
-            text-align: center;
-        }
+.about{
+    background:#111;
+    border-top:1px solid #222;
+    border-bottom:1px solid #222;
+    padding:70px 20px;
+    text-align:center;
+}
 
-        .about h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
+.about h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
 
-        .about h2 span {
-            color: #d4af37;
-        }
+.about h2 span{
+    color:#d4af37;
+}
 
-        .about p {
-            max-width: 750px;
-            margin: auto;
-            line-height: 1.8;
-            color: #aaa;
-            font-size: 16px;
-        }
+.about p{
+    max-width:750px;
+    margin:auto;
+    line-height:1.8;
+    color:#aaa;
+    font-size:16px;
+}
 
-        .contact {
-            padding: 60px 20px;
-            text-align: center;
-        }
+.contact{
+    padding:60px 20px;
+    text-align:center;
+}
 
-        .contact h2 {
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
+.contact h2{
+    font-size:30px;
+    margin-bottom:15px;
+}
 
-        .contact p {
-            color: #aaa;
-            margin-bottom: 25px;
-        }
+.contact p{
+    color:#aaa;
+    margin-bottom:25px;
+}
 
-        footer {
-            background: #050505;
-            border-top: 1px solid #d4af37;
-            text-align: center;
-            padding: 30px 15px;
-        }
+footer{
+    background:#050505;
+    border-top:1px solid #d4af37;
+    text-align:center;
+    padding:30px 15px;
+}
 
-        footer p {
-            margin: 8px;
-            color: #888;
-        }
+footer p{
+    margin:8px;
+    color:#888;
+}
 
-        footer .gold {
-            color: #d4af37;
-            font-weight: bold;
-            font-size: 18px;
-        }
+footer .gold{
+    color:#d4af37;
+    font-weight:bold;
+    font-size:18px;
+}
 
-        @media (max-width: 700px) {
+@media(max-width:700px){
 
-            .nav {
-                flex-direction: column;
-            }
+    .nav{
+        flex-direction:column;
+    }
 
-            nav a {
-                margin: 0 7px;
-            }
+    nav a{
+        margin:0 7px;
+    }
 
-            .hero h1 {
-                font-size: 38px;
-            }
+    .hero h1{
+        font-size:38px;
+    }
 
-            .hero p {
-                font-size: 16px;
-            }
+    .hero p{
+        font-size:16px;
+    }
 
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    .category-buttons{
+        grid-template-columns:1fr;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
+<div class="nav">
 
-    <div class="nav">
+<div class="logo">
+OnlineBrandStore
+</div>
 
-        <div class="logo">
-            OnlineBrandStore
-        </div>
+<nav>
+<a href="#home">Home</a>
+<a href="#categories">Categories</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#products">Products</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-    </div>
-
+</div>
 </header>
 
 
-<!-- HOME -->
-
 <section class="hero" id="home">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <div class="hero-small">
-            Karachi • Pakistan
-        </div>
+<div class="hero-small">
+Karachi • Pakistan
+</div>
 
-        <h1>
-            Style That <span>Speaks</span>
-        </h1>
+<h1>
+Style That <span>Speaks</span>
+</h1>
 
-        <p>
-            Discover stylish watches and quality wireless earbuds
-            designed for your everyday lifestyle.
-        </p>
+<p>
+Discover stylish watches, quality wireless earbuds
+and speakers for your everyday lifestyle.
+</p>
 
-        <a class="whatsapp"
-           href="https://wa.me/923101151110?text=Hello%20OnlineBrandStore%2C%20I%20want%20to%20know%20about%20your%20products."
-           target="_blank">
+<a class="whatsapp"
+href="https://wa.me/923101151110?text=Hello%20OnlineBrandStore%2C%20I%20want%20to%20know%20about%20your%20products."
+target="_blank">
 
-            💬 Order on WhatsApp
+💬 Order on WhatsApp
 
-        </a>
+</a>
 
-    </div>
-
+</div>
 </section>
 
 
-<!-- PRODUCTS -->
+<section class="categories" id="categories">
+
+<div class="category-title">
+
+<h2>Shop By <span>Category</span></h2>
+
+</div>
+
+
+<div class="category-buttons">
+
+<div class="category-btn active"
+onclick="showCategory('watches')">
+
+⌚ Watches
+
+<small>View all watches</small>
+
+</div>
+
+
+<div class="category-btn"
+onclick="showCategory('earbuds')">
+
+🎧 Earbuds
+
+<small>View all earbuds</small>
+
+</div>
+
+
+<div class="category-btn"
+onclick="showCategory('speakers')">
+
+🔊 Speakers
+
+<small>View all speakers</small>
+
+</div>
+
+</div>
+
+</section>
+
 
 <section class="products" id="products">
 
-    <div class="section-title">
+<div class="section-title">
 
-        <h2>
-            Our <span>Products</span>
-        </h2>
+<h2 id="productHeading">
+Our <span>Watches</span>
+</h2>
 
-        <p>
-            Select a category
-        </p>
+<p id="productSubheading">
+Premium watches collection
+</p>
 
-    </div>
+</div>
 
 
-    <!-- CATEGORY BUTTONS -->
+<div class="product-grid">
 
-    <div class="categories">
 
-        <button
-            class="category-btn active"
-            onclick="showCategory('watches', this)">
-            ⌚ Watches
-        </button>
+<!-- WATCH 1 -->
 
-        <button
-            class="category-btn"
-            onclick="showCategory('earbuds', this)">
-            🎧 Earbuds
-        </button>
+<div class="product category-watches">
 
-    </div>
+<div class="product-image">
 
+<img
+src="./WhatsApp%20Image%202026-08-30%20at%209.17.18%20PM.jpeg"
+alt="ALONE Premium Watch">
 
-    <!-- WATCHES -->
+</div>
 
-    <div
-        class="product-grid"
-        id="watches">
+<div class="product-content">
 
+<h3>ALONE Premium Watch</h3>
 
-        <!-- WATCH 1 -->
+<p>
+Elegant black premium watch
+with a stylish modern design.
+</p>
 
-        <div class="product">
+<div class="price">
+Contact Us
+</div>
 
-            <div class="product-image">
+<a class="order"
+href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20ALONE%20Premium%20Watch."
+target="_blank">
 
-                <img
-                    src="./WhatsApp%20Image%202026-08-30%20at%209.17.18%20PM.jpeg"
-                    alt="ALONE Premium Watch">
+Order Now
 
-            </div>
+</a>
 
-            <div class="product-content">
+</div>
+</div>
 
-                <h3>
-                    ALONE Premium Watch
-                </h3>
 
-                <p>
-                    Elegant black premium watch
-                    with a stylish modern design.
-                </p>
+<!-- WATCH 2 -->
 
-                <div class="price">
-                    Contact Us
-                </div>
+<div class="product category-watches">
 
-                <a
-                    class="order"
-                    href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20ALONE%20Premium%20Watch."
-                    target="_blank">
+<div class="product-image">
 
-                    Order Now
+<img
+src="./watch2.jpeg"
+alt="Premium Black Watch">
 
-                </a>
+</div>
 
-            </div>
+<div class="product-content">
 
-        </div>
+<h3>Premium Black Watch</h3>
 
+<p>
+Stylish men's watch for
+casual and formal occasions.
+</p>
 
-        <!-- WATCH 2 -->
+<div class="price">
+Contact Us
+</div>
 
-        <div class="product">
+<a class="order"
+href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20Premium%20Black%20Watch."
+target="_blank">
 
-            <div class="product-image">
+Order Now
 
-                <img
-                    src="./watch2.jpeg"
-                    alt="Premium Black Watch">
+</a>
 
-            </div>
+</div>
+</div>
 
-            <div class="product-content">
 
-                <h3>
-                    Premium Black Watch
-                </h3>
+<!-- EARBUD 1 -->
 
-                <p>
-                    Stylish men's watch for
-                    casual and formal occasions.
-                </p>
+<div class="product category-earbuds" style="display:none;">
 
-                <div class="price">
-                    Contact Us
-                </div>
+<div class="product-image">
 
-                <a
-                    class="order"
-                    href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20Premium%20Black%20Watch."
-                    target="_blank">
+<img
+src="./luna-pods-7-days-wireless-tws-earbuds-pakistan-priceoye-mpqkh-500x500.webp"
+alt="7DAYS Luna Earbuds">
 
-                    Order Now
+</div>
 
-                </a>
+<div class="product-content">
 
-            </div>
+<h3>7DAYS Luna</h3>
 
-        </div>
+<p>
+Stylish wireless earbuds
+with a modern design.
+</p>
 
-    </div>
+<div class="price">
+Rs. 1,500
+</div>
 
+<a class="order"
+href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%207DAYS%20Luna%20Earbuds."
+target="_blank">
 
-    <!-- EARBUDS -->
+Order Now
 
-    <div
-        class="product-grid"
-        id="earbuds"
-        style="display:none;">
+</a>
 
+</div>
+</div>
 
-        <!-- 7DAYS LUNA -->
 
-        <div class="product">
+<!-- EARBUD 2 J69 -->
 
-            <div class="product-image">
+<div class="product category-earbuds" style="display:none;">
 
-                <img
-                    src="./luna-pods-7-days-wireless-tws-earbuds-pakistan-priceoye-mpqkh-500x500.webp"
-                    alt="7DAYS Luna Earbuds">
+<div class="product-image">
 
-            </div>
+<img
+src="./j69.jpeg"
+alt="J69 Premium Earbuds">
 
-            <div class="product-content">
+</div>
 
-                <h3>
-                    7DAYS Luna
-                </h3>
+<div class="product-content">
 
-                <p>
-                    Stylish wireless earbuds
-                    with a modern design.
-                </p>
+<h3>J69 Earbuds</h3>
 
-                <div class="price">
-                    Rs. 1,500
-                </div>
+<p>
+Premium wireless earbuds
+with stylish modern design.
+</p>
 
-                <a
-                    class="order"
-                    href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%207DAYS%20Luna%20Earbuds."
-                    target="_blank">
+<div class="price">
+Contact Us
+</div>
 
-                    Order Now
+<a class="order"
+href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20J69%20Earbuds."
+target="_blank">
 
-                </a>
+Order Now
 
-            </div>
+</a>
 
-        </div>
+</div>
+</div>
 
 
-        <!-- J69 EARBUDS -->
+<!-- SPEAKER -->
 
-        <div class="product">
+<div class="product category-speakers" style="display:none;">
 
-            <div class="product-image">
+<div class="product-image">
 
-                <img
-                    src="./j69.jpeg"
-                    alt="J69 Premium Earbuds">
+<img
+src="./WhatsApp%20Image%202026-08-31%20at%201.57.08%20AM.jpeg"
+alt="Premium Speaker">
 
-            </div>
+</div>
 
-            <div class="product-content">
+<div class="product-content">
 
-                <h3>
-                    J69 Earbuds
-                </h3>
+<h3>Premium Speaker</h3>
 
-                <p>
-                    Comfortable wireless earbuds
-                    for music and everyday use.
-                </p>
+<p>
+Portable speaker with stylish
+design and quality sound.
+</p>
 
-                <div class="price">
-                    Contact Us
-                </div>
+<div class="price">
+Contact Us
+</div>
 
-                <a
-                    class="order"
-                    href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20J69%20Earbuds."
-                    target="_blank">
+<a class="order"
+href="https://wa.me/923101151110?text=Hello%2C%20I%20want%20to%20order%20Premium%20Speaker."
+target="_blank">
 
-                    Order Now
+Order Now
 
-                </a>
+</a>
 
-            </div>
+</div>
+</div>
 
-        </div>
 
-    </div>
-
+</div>
 </section>
 
-
-<!-- ABOUT -->
 
 <section class="about" id="about">
 
-    <h2>
-        About <span>OnlineBrandStore</span>
-    </h2>
+<h2>
+About <span>OnlineBrandStore</span>
+</h2>
 
-    <p>
-
-        Welcome to OnlineBrandStore-MOEEZ-ALI.
-        We provide stylish watches and quality earbuds
-        in Karachi, Pakistan. Our goal is to provide
-        attractive products at great prices with easy
-        WhatsApp ordering.
-
-    </p>
+<p>
+Welcome to OnlineBrandStore-MOEEZ-ALI.
+We provide stylish watches, quality earbuds
+and speakers in Karachi, Pakistan.
+Our goal is to provide attractive products
+at great prices with easy WhatsApp ordering.
+</p>
 
 </section>
 
-
-<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
-    <h2>
-        Ready to Order?
-    </h2>
+<h2>
+Ready to Order?
+</h2>
 
-    <p>
+<p>
+Contact us on WhatsApp for product details,
+prices and orders.
+</p>
 
-        Contact us on WhatsApp for product details,
-        prices and orders.
+<a class="whatsapp"
+href="https://wa.me/923101151110?text=Hello%20OnlineBrandStore%2C%20I%20want%20to%20place%20an%20order."
+target="_blank">
 
-    </p>
+💬 Chat on WhatsApp
 
-    <a
-        class="whatsapp"
-        href="https://wa.me/923101151110?text=Hello%20OnlineBrandStore%2C%20I%20want%20to%20place%20an%20order."
-        target="_blank">
-
-        💬 Chat on WhatsApp
-
-    </a>
+</a>
 
 </section>
 
 
-<!-- FOOTER -->
-
 <footer>
 
-    <p class="gold">
-        OnlineBrandStore-MOEEZ-ALI
-    </p>
+<p class="gold">
+OnlineBrandStore-MOEEZ-ALI
+</p>
 
-    <p>
-        Karachi, Pakistan
-    </p>
+<p>
+Karachi, Pakistan
+</p>
 
-    <p>
-        WhatsApp: 0310-1151110
-    </p>
+<p>
+WhatsApp: 0310-1151110
+</p>
 
-    <p>
-        © 2026 OnlineBrandStore-MOEEZ-ALI
-    </p>
+<p>
+© 2026 OnlineBrandStore-MOEEZ-ALI
+</p>
 
 </footer>
 
 
-<!-- CATEGORY SCRIPT -->
-
 <script>
 
-function showCategory(category, button) {
+function showCategory(category){
 
-    const watches = document.getElementById("watches");
-    const earbuds = document.getElementById("earbuds");
+    const products =
+    document.querySelectorAll(".product");
 
-    const buttons = document.querySelectorAll(".category-btn");
+    const buttons =
+    document.querySelectorAll(".category-btn");
 
-    buttons.forEach(function(btn) {
-        btn.classList.remove("active");
+    products.forEach(function(product){
+
+        if(product.classList.contains("category-" + category)){
+            product.style.display = "block";
+        }
+        else{
+            product.style.display = "none";
+        }
+
     });
 
-    button.classList.add("active");
 
-    if (category === "watches") {
+    buttons.forEach(function(button){
+        button.classList.remove("active");
+    });
 
-        watches.style.display = "grid";
-        earbuds.style.display = "none";
+
+    event.currentTarget.classList.add("active");
+
+
+    const heading =
+    document.getElementById("productHeading");
+
+    const subheading =
+    document.getElementById("productSubheading");
+
+
+    if(category === "watches"){
+
+        heading.innerHTML = 'Our <span>Watches</span>';
+
+        subheading.innerText =
+        "Premium watches collection";
 
     }
 
-    if (category === "earbuds") {
 
-        watches.style.display = "none";
-        earbuds.style.display = "grid";
+    if(category === "earbuds"){
+
+        heading.innerHTML = 'Our <span>Earbuds</span>';
+
+        subheading.innerText =
+        "Wireless earbuds collection";
 
     }
+
+
+    if(category === "speakers"){
+
+        heading.innerHTML = 'Our <span>Speakers</span>';
+
+        subheading.innerText =
+        "Quality speakers collection";
+
+    }
+
+
+    document.getElementById("products")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
 
 }
 
 </script>
 
-
 </body>
 </html>
+```
