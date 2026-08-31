@@ -360,6 +360,7 @@ footer .gold{
 <body>
 
 <header>
+
 <div class="nav">
 
 <div class="logo">
@@ -374,6 +375,7 @@ OnlineBrandStore
 </nav>
 
 </div>
+
 </header>
 
 
@@ -403,6 +405,7 @@ target="_blank">
 </a>
 
 </div>
+
 </section>
 
 
@@ -410,15 +413,18 @@ target="_blank">
 
 <div class="category-title">
 
-<h2>Shop By <span>Category</span></h2>
+<h2>
+Shop By <span>Category</span>
+</h2>
 
 </div>
 
 
 <div class="category-buttons">
 
+
 <div class="category-btn active"
-onclick="showCategory('watches')">
+onclick="showCategory('watches', this)">
 
 ⌚ Watches
 
@@ -428,7 +434,7 @@ onclick="showCategory('watches')">
 
 
 <div class="category-btn"
-onclick="showCategory('earbuds')">
+onclick="showCategory('earbuds', this)">
 
 🎧 Earbuds
 
@@ -438,13 +444,14 @@ onclick="showCategory('earbuds')">
 
 
 <div class="category-btn"
-onclick="showCategory('speakers')">
+onclick="showCategory('speakers', this)">
 
 🔊 Speakers
 
 <small>View all speakers</small>
 
 </div>
+
 
 </div>
 
@@ -503,6 +510,7 @@ Order Now
 </a>
 
 </div>
+
 </div>
 
 
@@ -540,6 +548,7 @@ Order Now
 </a>
 
 </div>
+
 </div>
 
 
@@ -577,10 +586,11 @@ Order Now
 </a>
 
 </div>
+
 </div>
 
 
-<!-- EARBUD 2 J69 -->
+<!-- EARBUD 2 -->
 
 <div class="product category-earbuds" style="display:none;">
 
@@ -588,7 +598,7 @@ Order Now
 
 <img
 src="./j69.jpeg"
-alt="J69 Premium Earbuds">
+alt="J69 Earbuds">
 
 </div>
 
@@ -614,6 +624,7 @@ Order Now
 </a>
 
 </div>
+
 </div>
 
 
@@ -624,7 +635,7 @@ Order Now
 <div class="product-image">
 
 <img
-src="./WhatsApp%20Image%202026-08-31%20at%201.57.08%20AM.jpeg"
+src="./WhatsApp%20Image%202026-08-20%20at%204.48.11%20PM.jpeg"
 alt="Premium Speaker">
 
 </div>
@@ -651,10 +662,12 @@ Order Now
 </a>
 
 </div>
+
 </div>
 
 
 </div>
+
 </section>
 
 
@@ -720,32 +733,37 @@ WhatsApp: 0310-1151110
 
 <script>
 
-function showCategory(category){
+function showCategory(category, button){
 
     const products =
     document.querySelectorAll(".product");
 
-    const buttons =
-    document.querySelectorAll(".category-btn");
-
     products.forEach(function(product){
 
         if(product.classList.contains("category-" + category)){
+
             product.style.display = "block";
-        }
-        else{
+
+        }else{
+
             product.style.display = "none";
+
         }
 
     });
 
 
-    buttons.forEach(function(button){
-        button.classList.remove("active");
+    const buttons =
+    document.querySelectorAll(".category-btn");
+
+    buttons.forEach(function(btn){
+
+        btn.classList.remove("active");
+
     });
 
 
-    event.currentTarget.classList.add("active");
+    button.classList.add("active");
 
 
     const heading =
@@ -757,7 +775,8 @@ function showCategory(category){
 
     if(category === "watches"){
 
-        heading.innerHTML = 'Our <span>Watches</span>';
+        heading.innerHTML =
+        'Our <span>Watches</span>';
 
         subheading.innerText =
         "Premium watches collection";
@@ -767,7 +786,8 @@ function showCategory(category){
 
     if(category === "earbuds"){
 
-        heading.innerHTML = 'Our <span>Earbuds</span>';
+        heading.innerHTML =
+        'Our <span>Earbuds</span>';
 
         subheading.innerText =
         "Wireless earbuds collection";
@@ -777,7 +797,8 @@ function showCategory(category){
 
     if(category === "speakers"){
 
-        heading.innerHTML = 'Our <span>Speakers</span>';
+        heading.innerHTML =
+        'Our <span>Speakers</span>';
 
         subheading.innerText =
         "Quality speakers collection";
@@ -793,6 +814,7 @@ function showCategory(category){
 }
 
 </script>
+
 
 </body>
 </html>
